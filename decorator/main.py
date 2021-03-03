@@ -1,8 +1,8 @@
-def hi(name):
-    return f'Hi, {name}'
+def hi():
+    return f'Hi, '
 
 
-x = hi('Murod')
+x = hi()
 y = hi
-print(type(x))
-print(type(y))
+print(x)
+print(y())

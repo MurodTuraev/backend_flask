@@ -9,6 +9,16 @@ def home():
     return html
 
 
+@app.route('/aboutme')
+def aboutme():
+    return 'About ME'
+
+
+@app.route('/portfolio')
+def portfolio():
+    return 'portfolio'
+
+
 @app.route('/help')
 def help():
     return html
