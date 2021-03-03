@@ -9,7 +9,11 @@ html_temp = Template('''
     </head>
     <body>
         <h1>{{content}}</h1>
-        {{link}}
+        <a href='/'>Home</a>
+        <a href='/aboutme'>About ME</a>
+        <a href='/portfolio'>Portfolio</a>
+        <a href='/contact'>Contact</a>
+        <a href='/help'>Help</a>
     </body>
     </html>
     ''')
@@ -19,71 +23,35 @@ html_temp = Template('''
 def home():
     content = 'Home'
     title = 'HOME'
-    link = '''
-    <a href='/'>Home</a>
-    <a href='/aboutme'>About ME</a>
-    <a href='/portfolio'>Portfolio</a>
-    <a href='/contact'>Contact</a>
-    <a href='/help'>Help</a>
-    '''
-
-    return html_temp.render(title=title, content=content, link=link)
+    return html_temp.render(title=title, content=content)
 
 
 @app.route('/aboutme')
 def aboutme():
     content = 'Aboutme'
     title = 'ABOUTME'
-    link = '''
-    <a href='/'>Home</a>
-    <a href='/aboutme'>About ME</a>
-    <a href='/portfolio'>Portfolio</a>
-    <a href='/contact'>Contact</a>
-    <a href='/help'>Help</a>
-    '''
-    return html_temp.render(title=title, content=content, link=link)
+    return html_temp.render(title=title, content=content)
 
 
 @app.route('/portfolio')
 def portfolio():
     content = 'Portfolio'
     title = 'PORTFOLIO'
-    link = '''
-    <a href='/'>Home</a>
-    <a href='/aboutme'>About ME</a>
-    <a href='/portfolio'>Portfolio</a>
-    <a href='/contact'>Contact</a>
-    <a href='/help'>Help</a>
-    '''
-    return html_temp.render(title=title, content=content, link=link)
+    return html_temp.render(title=title, content=content)
 
 
 @app.route('/contact')
 def contact():
     content = 'Contact'
     title = 'CONTACT'
-    link = '''
-    <a href='/'>Home</a>
-    <a href='/aboutme'>About ME</a>
-    <a href='/portfolio'>Portfolio</a>
-    <a href='/contact'>Contact</a>
-    <a href='/help'>Help</a>
-    '''
-    return html_temp.render(title=title, content=content, link=link)
+    return html_temp.render(title=title, content=content)
 
 
 @app.route('/help')
 def help():
     content = 'Help'
     title = 'HELP'
-    link = '''
-    <a href='/'>Home</a>
-    <a href='/aboutme'>About ME</a>
-    <a href='/portfolio'>Portfolio</a>
-    <a href='/contact'>Contact</a>
-    <a href='/help'>Help</a>
-    '''
-    return html_temp.render(title=title, content=content, link=link)
+    return html_temp.render(title=title, content=content)
 
 
 app.run(debug=True)
