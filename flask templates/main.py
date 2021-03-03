@@ -1,5 +1,18 @@
 from flask import Flask
+from jinja2 import Template
 app = Flask(__name__)
+
+html_temp = Template('''
+    <html>
+    <head>
+        <title> {{title}} </title>
+    </head>
+    <body>
+        <h1>{{content}}</h1>
+        {{link}}
+    </body>
+    </html>
+    ''')
 
 
 @app.route('/')
@@ -13,18 +26,8 @@ def home():
     <a href='/contact'>Contact</a>
     <a href='/help'>Help</a>
     '''
-    html_temp = f'''
-    <html>
-    <head>
-        <title> {title} </title>
-    </head>
-    <body>
-        <h1>{content}</h1>
-        {link}
-    </body>
-    </html>
-    '''
-    return html_temp
+
+    return html_temp.render(title=title, content=content, link=link)
 
 
 @app.route('/aboutme')
@@ -38,18 +41,7 @@ def aboutme():
     <a href='/contact'>Contact</a>
     <a href='/help'>Help</a>
     '''
-    html_temp = f'''
-    <html>
-    <head>
-        <title> {title} </title>
-    </head>
-    <body>
-        <h1>{content}</h1>
-        {link}
-    </body>
-    </html>
-    '''
-    return html_temp
+    return html_temp.render(title=title, content=content, link=link)
 
 
 @app.route('/portfolio')
@@ -63,18 +55,7 @@ def portfolio():
     <a href='/contact'>Contact</a>
     <a href='/help'>Help</a>
     '''
-    html_temp = f'''
-    <html>
-    <head>
-        <title> {title} </title>
-    </head>
-    <body>
-        <h1>{content}</h1>
-        {link}
-    </body>
-    </html>
-    '''
-    return html_temp
+    return html_temp.render(title=title, content=content, link=link)
 
 
 @app.route('/contact')
@@ -88,18 +69,7 @@ def contact():
     <a href='/contact'>Contact</a>
     <a href='/help'>Help</a>
     '''
-    html_temp = f'''
-    <html>
-    <head>
-        <title> {title} </title>
-    </head>
-    <body>
-        <h1>{content}</h1>
-        {link}
-    </body>
-    </html>
-    '''
-    return html_temp
+    return html_temp.render(title=title, content=content, link=link)
 
 
 @app.route('/help')
@@ -113,18 +83,7 @@ def help():
     <a href='/contact'>Contact</a>
     <a href='/help'>Help</a>
     '''
-    html_temp = f'''
-    <html>
-    <head>
-        <title> {title} </title>
-    </head>
-    <body>
-        <h1>{content}</h1>
-        {link}
-    </body>
-    </html>
-    '''
-    return html_temp
+    return html_temp.render(title=title, content=content, link=link)
 
 
 app.run(debug=True)
