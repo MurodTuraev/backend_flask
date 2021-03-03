@@ -7,6 +7,7 @@ def home():
     content = 'Home'
     title = 'HOME'
     link = '''
+    <a href='/'>Home</a>
     <a href='/aboutme'>About ME</a>
     <a href='/portfolio'>Portfolio</a>
     <a href='/contact'>Contact</a>
@@ -31,6 +32,7 @@ def aboutme():
     content = 'Aboutme'
     title = 'ABOUTME'
     link = '''
+    <a href='/'>Home</a>
     <a href='/aboutme'>About ME</a>
     <a href='/portfolio'>Portfolio</a>
     <a href='/contact'>Contact</a>
@@ -55,6 +57,7 @@ def portfolio():
     content = 'Portfolio'
     title = 'PORTFOLIO'
     link = '''
+    <a href='/'>Home</a>
     <a href='/aboutme'>About ME</a>
     <a href='/portfolio'>Portfolio</a>
     <a href='/contact'>Contact</a>
@@ -79,6 +82,7 @@ def contact():
     content = 'Contact'
     title = 'CONTACT'
     link = '''
+    <a href='/'>Home</a>
     <a href='/aboutme'>About ME</a>
     <a href='/portfolio'>Portfolio</a>
     <a href='/contact'>Contact</a>
@@ -103,6 +107,7 @@ def help():
     content = 'Help'
     title = 'HELP'
     link = '''
+    <a href='/'>Home</a>
     <a href='/aboutme'>About ME</a>
     <a href='/portfolio'>Portfolio</a>
     <a href='/contact'>Contact</a>
