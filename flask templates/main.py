@@ -7,35 +7,40 @@ app = Flask(__name__)
 def home():
     content = 'Home'
     title = 'HOME'
-    return render_template('home.html', title=title, content=content)
+    img = 'uz.png'
+    return render_template('home.html', title=title, content=content, img=img)
 
 
 @app.route('/aboutme')
 def aboutme():
     content = 'Aboutme'
     title = 'ABOUTME'
-    return render_template('home.html', title=title, content=content)
+    img = 'uz.png'
+    return render_template('home.html', title=title, content=content, img=img)
 
 
 @app.route('/portfolio')
 def portfolio():
     content = 'Portfolio'
     title = 'PORTFOLIO'
-    return render_template('home.html', title=title, content=content)
+    img = 'ru.png'
+    return render_template('home.html', title=title, content=content, img=img)
 
 
 @app.route('/contact')
 def contact():
     content = 'Contact'
     title = 'CONTACT'
-    return render_template('home.html', title=title, content=content)
+    img = 'kz.png'
+    return render_template('home.html', title=title, content=content, img=img)
 
 
 @app.route('/help')
 def help():
     content = 'Help'
     title = 'HELP'
-    return render_template('home.html', title=title, content=content)
+    img = 'us.png'
+    return render_template('home.html', title=title, content=content, img=img)
 
 
 app.run(debug=True)
